@@ -1,0 +1,423 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #c084fc, #f5d0fe);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ESTRELAS */
+
+.stars::before {
+    content: "✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    animation: stars 12s linear infinite;
+    z-index: 0;
+}
+
+/* CORAÇÕES FLUTUANDO */
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -100px;
+    font-size: 20px;
+    animation: floating linear infinite;
+    opacity: 0.5;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 5%;
+    animation-duration: 8s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 15%;
+    animation-duration: 12s;
+    font-size: 30px;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 25%;
+    animation-duration: 10s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 35%;
+    animation-duration: 14s;
+    font-size: 28px;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 45%;
+    animation-duration: 9s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 55%;
+    animation-duration: 13s;
+    font-size: 32px;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 65%;
+    animation-duration: 11s;
+}
+
+.floating-hearts span:nth-child(8) {
+    left: 75%;
+    animation-duration: 15s;
+    font-size: 28px;
+}
+
+.floating-hearts span:nth-child(9) {
+    left: 85%;
+    animation-duration: 9s;
+}
+
+.floating-hearts span:nth-child(10) {
+    left: 95%;
+    animation-duration: 16s;
+    font-size: 35px;
+}
+
+/* CAMADA DOS TEXTOS */
+
+.hero,
+.declaration,
+.counter,
+.cards,
+.letter-section,
+.quotes,
+.surprise,
+.gallery {
+    position: relative;
+    z-index: 5;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+.subtitle {
+    max-width: 700px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* BOTÕES */
+
+button {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #9333ea;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255,255,255,0.8);
+}
+
+/* DECLARAÇÃO */
+
+.declaration {
+    padding: 90px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.declaration h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.declaration p {
+    font-size: 1.3rem;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.final-text {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-shadow: 0 0 15px white;
+}
+
+/* CONTADOR */
+
+.counter {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.counter-box {
+    margin-top: 30px;
+}
+
+#seconds {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 80px 20px;
+}
+
+.card {
+    width: 320px;
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.emoji {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+/* CARTA */
+
+.letter-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.letter {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 30px;
+    line-height: 2;
+    font-size: 1.2rem;
+    animation: fade 1s;
+}
+
+/* FRASES */
+
+.quotes {
+    padding: 80px 20px;
+}
+
+.quotes h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+}
+
+.quote-card {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.quote-card:hover {
+    transform: scale(1.03);
+}
+
+.quote-card p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.quote-card span {
+    opacity: 0.8;
+}
+
+/* SURPRESA */
+
+.surprise {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hugMessage {
+    margin-top: 25px;
+    font-size: 1.5rem;
+}
+
+/* GALERIA */
+
+.gallery {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.gallery h2 {
+    margin-bottom: 40px;
+    font-size: 3rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.photo {
+    height: 120px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: 0.4s;
+}
+
+.photo:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes floating {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes stars {
+
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes glow {
+
+    from {
+        text-shadow: 0 0 10px white;
+    }
+
+    to {
+        text-shadow: 0 0 30px white;
+    }
+}
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fall {
+
+    from {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+/* UTIL */
+
+.hidden {
+    display: none;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 768px) {
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .declaration h2,
+    .quotes h2,
+    .gallery h2 {
+        font-size: 2.2rem;
+    }
+
+}
